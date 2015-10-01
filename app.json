@@ -1,0 +1,20 @@
+{
+  "name": "salesforce-lds-seed",
+  "description": "Sample project for SalesForce using Lightning Design System for kick-off purposes.",
+  "repository": "https://github.com/m-wrona/salesforce-lds-seed",
+  "keywords": ["salesforce", "lds", "lightningdesignsystem", "node" ],
+  "env": {
+    "USERNAME": {
+      "description": "Your Saleforce.com username"
+    },
+    "PASSWORD": {
+      "description": "Your Saleforce.com password and security token."
+    },
+    "CLIENT_ID": {
+      "description": "Your Connected App's Consumer Key."
+    },
+    "CLIENT_SECRET": {
+      "description": "Your Connected App's Consumer Secret."
+    }
+  }
+}
