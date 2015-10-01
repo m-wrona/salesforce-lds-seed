@@ -12,6 +12,17 @@ Generic:
 
 ##### Salesforce access
 
+0) Create file '.salesforce' with following content:
+
+```shell
+#!/bin/sh
+
+export CLIENT_ID=YOUR-SALESFORCE-CLIENT-ID (3rd step)
+export CLIENT_SECRET=YOUR-SALESFORCE-SECRET (3rd step)
+export USERNAME=YOUR-SALESFORCE-USERNAME (2nd step)
+export PASSWORD=YOUR-SALESFORCE-PASSWORD-AND-TOKEN (2nd step)
+```
+
 1) Enable REST API for your organization
 
 REST API is enabled by default when you have one of the following editions:
@@ -46,16 +57,7 @@ b) Go to 'Build'->'Create'->'Apps' and create new CONNECTED app with:
 
 c) paste generated consumer key and secret into .salesfoce file
 
-4) Save .salesforce file with following content:
-
-```shell
-#!/bin/sh
-
-export CLIENT_ID=YOUR-SALESFORCE-CLIENT-ID (3rd step)
-export CLIENT_SECRET=YOUR-SALESFORCE-SECRET (3rd step)
-export USERNAME=YOUR-SALESFORCE-USERNAME (2nd step)
-export PASSWORD=YOUR-SALESFORCE-PASSWORD-AND-TOKEN (2nd step)
-```
+4) Save .salesforce file
 
 ## Development
 
