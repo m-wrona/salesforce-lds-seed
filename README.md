@@ -2,6 +2,8 @@
 
 Sample project for SalesForce using [Lightning Design System](https://www.lightningdesignsystem.com) for kick-off purposes.
 
+Project created based on tutorials and found meterials regarding LDS.
+
 ## Required
 
 Generic:
