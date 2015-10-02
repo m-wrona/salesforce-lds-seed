@@ -87,6 +87,12 @@ Then check your [browser](http://localhost:8088). Application will be run on por
 
 ## Deployment
 
+1) Deploy from template
+
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/m-wrona/salesforce-lds-seed)
+
+2) Deploy manually following [tutorial](https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction).
+
 TODO
 
 ## Salesforce
