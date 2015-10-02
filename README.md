@@ -4,6 +4,8 @@ Sample project for SalesForce using [Lightning Design System](https://www.lightn
 
 Project created based on tutorials and found meterials regarding LDS.
 
+Demo of application can be checked [here](https://salesforce-lds-seed.herokuapp.com/) if free account is still valid (30 days grace period).
+
 ## Required
 
 Generic:
@@ -92,8 +94,6 @@ Then check your [browser](http://localhost:8088). Application will be run on por
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/m-wrona/salesforce-lds-seed)
 
 2) Deploy manually following [tutorial](https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction).
-
-TODO
 
 ## Salesforce
 
