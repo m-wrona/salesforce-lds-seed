@@ -6,7 +6,9 @@ var Promise = require("bluebird");
 var nforce = require('nforce');
 var org = require('../lib/connection');
 
-/* home page. */
+/**
+ * Display main page
+**/
 router.get('/', function(req, res, next) {
 
   org.query({ query: "Select Id, Name, Type, Industry, Rating From Account Order By LastModifiedDate DESC" })
@@ -16,12 +18,16 @@ router.get('/', function(req, res, next) {
 
 });
 
-/* Display new account form */
+/**
+ * Display new account view
+**/
 router.get('/new', function(req, res, next) {
   res.render('new');
 });
 
-/* Creates a new the record */
+/**
+ * Create new account
+**/
 router.post('/', function(req, res, next) {
 
   var acc = nforce.createSObject('Account');
@@ -38,7 +44,9 @@ router.post('/', function(req, res, next) {
 });
 
 
-/* Record detail page */
+/**
+ * Display account info view
+**/
 router.get('/:id', function(req, res, next) {
   // query for record, contacts and opportunities
   Promise.join(
@@ -50,7 +58,9 @@ router.get('/:id', function(req, res, next) {
     });
 });
 
-/* Display record update form */
+/**
+ * Display edit account view
+**/
 router.get('/:id/edit', function(req, res, next) {
   org.getRecord({ id: req.params.id, type: 'Account'})
     .then(function(account){
@@ -58,7 +68,9 @@ router.get('/:id/edit', function(req, res, next) {
     });
 });
 
-/* Display record update form */
+/**
+ * Delete account
+**/
 router.get('/:id/delete', function(req, res, next) {
 
   var acc = nforce.createSObject('Account');
@@ -70,7 +82,9 @@ router.get('/:id/delete', function(req, res, next) {
     });
 });
 
-/* Updates the record */
+/**
+ * Update account
+**/
 router.post('/:id', function(req, res, next) {
 
   var acc = nforce.createSObject('Account');
