@@ -1,10 +1,8 @@
 var express = require('express');
 var router = express.Router();
-
 var Promise = require("bluebird");
-
 var nforce = require('nforce');
-var org = require('../lib/connection');
+var org = require('./salesforce/connection');
 
 /**
  * Display main page

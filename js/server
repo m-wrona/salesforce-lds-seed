@@ -1,29 +1,20 @@
 #!/usr/bin/env node
 
-/**
- * Module dependencies.
- */
-
-var app = require('../app');
+var app = require('./app');
 var debug = require('debug')('salesforce-lds-seed:server');
 var http = require('http');
 
-/**
- * Get port from environment and store in Express.
- */
 
+/**
+ * Set-up
+**/
 var port = normalizePort(process.env.PORT || '8088');
 app.set('port', port);
 
 /**
- * Create HTTP server.
- */
-
+ * Start-up
+**/
 var server = http.createServer(app);
-
-/**
- * Listen on provided port, on all network interfaces.
- */
 
 server.listen(port);
 server.on('error', onError);
@@ -32,7 +23,6 @@ server.on('listening', onListening);
 /**
  * Normalize a port into a number, string, or false.
  */
-
 function normalizePort(val) {
   var port = parseInt(val, 10);
 
@@ -50,9 +40,8 @@ function normalizePort(val) {
 }
 
 /**
- * Event listener for HTTP server "error" event.
+ * Error handler
  */
-
 function onError(error) {
   if (error.syscall !== 'listen') {
     throw error;
@@ -78,9 +67,8 @@ function onError(error) {
 }
 
 /**
- * Event listener for HTTP server "listening" event.
+ * Listener handler for debuging purposes
  */
-
 function onListening() {
   var addr = server.address();
   var bind = typeof addr === 'string'
